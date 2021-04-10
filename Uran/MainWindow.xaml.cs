@@ -26,33 +26,28 @@ namespace Uran
             InitializeComponent();
             computers = new Queue<Computer>();
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             PC add = new PC();
             if (add.ShowDialog()==true)
             {
-                
                 string name = add.NameComputer;
                 float memory = add.MemoryComputer;
                 Computer computer = new Computer(name, memory);
+                float total = 0;
                 computers.Enqueue(computer);
-                
+                foreach (Computer c in computers)
+                {
+                    total += c.Memory;
+                }
+                SizePanel.Text = total.ToString();
                 UpdateStack();
             }
         }
-
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             computers.Dequeue();
             UpdateStack();
-        }
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            float x = computers.Count();
-            UpdateStack();
-            SizePanel.Text = string.Format (x);
-
         }
         private void UpdateStack()
         {

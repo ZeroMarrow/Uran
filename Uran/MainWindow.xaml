@@ -27,15 +27,11 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        <TextBlock x:Name="SizePanel" Grid.Row="0" Grid.Column="1"
-                  Margin="10,151,10,129"  Background="#FF1B040A">
-        </TextBlock>
         <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center">
             <Button Content="Add" Width="150" Margin="10" Click="Button_Click" Background="#FFBE88D2"/>
             <Button Content="Delete" Width="150" Margin="10" Click="Button_Click_1" Background="#FFBE88D2"/>
         </StackPanel>
-        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" >
-            <Button Content="Total memory size" Width="150" Margin="10" Click="Button_Click_2" Background="#FFBE88D2"/>
-        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" />
+        <TextBlock x:Name="SizePanel" Grid.Column="1" HorizontalAlignment="Left" Margin="0,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="69" Width="216" Background="Salmon" FontSize="24"/>
     </Grid>
 </Window>
